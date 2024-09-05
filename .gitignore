@@ -9,3 +9,7 @@ logs
 chat-api*
 *.env
 .env
+# macOS system files
+.DS_Store
+# Custom file type
+*.rsls
