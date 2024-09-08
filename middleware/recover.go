@@ -21,7 +21,7 @@ func RelayPanicRecover() gin.HandlerFunc {
 				common.Errorf(ctx, fmt.Sprintf("request body: %s", string(body)))
 				c.JSON(http.StatusInternalServerError, gin.H{
 					"error": gin.H{
-						"message": fmt.Sprintf("Panic detected, error: %v. Please submit an issue with the related log here: https://github.com/ai365vip/chat-api", err),
+						"message": fmt.Sprintf("Panic detected, error: %v. Please submit an issue with the related log", err),
 						"type":    "chat_api_panic",
 					},
 				})

@@ -124,7 +124,7 @@ func main() {
 		common.SysError(fmt.Sprintf("panic detected: %v", err))
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"error": gin.H{
-				"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/ai365vip/chat-api", err),
+				"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue", err),
 				"type":    "chat_api_panic",
 			},
 		})
